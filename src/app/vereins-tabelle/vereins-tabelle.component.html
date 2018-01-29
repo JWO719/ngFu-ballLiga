@@ -1,0 +1,5 @@
+<table>
+  <tr *ngFor="let verein of vereineService.getVereine(); let i = index">
+    <app-vereins-eintrag [verein]="verein" [platz]="i +1"></app-vereins-eintrag>
+  </tr>
+</table>
