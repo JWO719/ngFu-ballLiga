@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {Verein} from './verein';
 import {VereineService} from './vereine.service';
 
 @Component({
@@ -8,10 +7,13 @@ import {VereineService} from './vereine.service';
   styleUrls: ['./vereins-tabelle.component.css']
 })
 export class VereinsTabelleComponent implements OnInit {
-  
+
+  public vereinsListe;
+
   constructor(public vereineService: VereineService){   }
 
   ngOnInit() {
+    this.vereinsListe = this.vereineService.vereine;
   }
 
 }
