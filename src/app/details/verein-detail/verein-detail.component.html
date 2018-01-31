@@ -1,0 +1,7 @@
+<div *ngIf="verein$ | async; let verein">
+  <span>{{verein.id }}</span>
+  <img [src]="verein.bild"/>
+  <span>{{verein.name}}</span>
+</div>
+
+<a [routerLink]="'/'">zurück</a>

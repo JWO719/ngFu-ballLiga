@@ -11,4 +11,8 @@ export class VereineService {
   get vereine(): Observable<Array<Verein>>{
     return this.http.get<Array<Verein>>('http://localhost:3000/vereine');
   }
+
+  getVerein(id: number): Observable<Verein>{
+    return this.http.get<Verein>('http://localhost:3000/vereine/'+id);
+  }
 }

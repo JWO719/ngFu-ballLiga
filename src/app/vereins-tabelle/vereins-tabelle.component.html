@@ -1,5 +1,5 @@
 <table>
   <tr *ngFor="let verein of (vereinsListe | async); let i = index">
-    <app-vereins-eintrag [verein]="verein" [platz]="i +1"></app-vereins-eintrag>
+    <app-vereins-eintrag [verein]="verein" [platz]="i +1" [routerLink]="'verein/'+(i+1)"></app-vereins-eintrag>
   </tr>
 </table>
